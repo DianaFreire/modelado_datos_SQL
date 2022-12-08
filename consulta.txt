@@ -1,0 +1,17 @@
+select     
+
+des_grupo,
+modelo, marca,
+des_color,
+des_aseg,
+fec_compra, matricula, kms,
+id_poliza
+
+from 
+
+practica_dff.flota a
+inner join practica_dff.coches b on a.id_coche = b.id_coche
+inner join practica_dff.color c on a.id_color = c.id_color
+inner join practica_dff.poliza f on a.id_flota = f.id_flota
+inner join practica_dff.grupo_empre e on b.id_grupo = e.id_grupo
+inner join practica_dff.aseguradora d on d.id_aseg = f.id_aseg
